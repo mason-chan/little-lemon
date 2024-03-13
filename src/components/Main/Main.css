@@ -1,0 +1,422 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #main {
+    /* clips bubbles that go off screen */
+    overflow: hidden;
+    padding: var(--sectionPadding);
+  }
+  #main .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #main .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #main .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #main .cs-title {
+    font-size: 64pt;
+    font-weight: medium;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #main .cs-title {
+    /* removed at tablet */
+    margin: 0 0 2rem 0;
+  }
+  #main .cs-button-solid {
+    font-size: 18pt;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: var(--bodyTextColor);
+    padding: 0 3rem;
+    border-radius: 16pt;
+    background-color: var(--primaryLight);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #main .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: var(--secondary);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #main .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #main .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #main .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 21.5rem;
+    border-radius: 1rem;
+    /* clips corners */
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bodyTextColorWhite);
+  }
+  #main .cs-item:hover .cs-background {
+    background-color: var(--primary);
+  }
+  #main .cs-item:hover .cs-background img {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  #main .cs-item:hover .cs-name {
+    color: var(--secondaryLight);
+  }
+  #main .cs-info {
+    padding: 0.75rem 1rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+  #main .cs-name {
+    font-size: 18pt;
+    font-weight: bolder;
+    color: var(--headerColor);
+    line-height: 1.5em;
+    margin: 0;
+    display: block;
+    transition: color 0.3s;
+  }
+  #main .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #main .cs-background {
+    width: 100%;
+    height: 21.25rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s;
+  }
+  #main .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes it behave like a background imahe */
+    object-fit: cover;
+    /* makes the image position itself at the top of the parent */
+    object-position: top;
+    transition: transform 0.6s, opacity 0.3s;
+  }
+  #main .cs-bubbles {
+    display: none;
+  }
+}
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+  #main .cs-content {
+    text-align: left;
+    width: 100%;
+    /* makes it match the max-width of the card group */
+    max-width: 44.25rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #main .cs-title {
+    margin: 0;
+  }
+  #main .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  #main .cs-item {
+    width: 48.8%;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #main .cs-content {
+    max-width: 100%;
+  }
+  #main .cs-card-group {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #main .cs-item {
+    /* stretch the list items as far as they can go, and the gap property on the parent will space them apart */
+    width: 100%;
+  }
+  #main .cs-background {
+    /* 250px - 335px */
+    height: clamp(15.625rem, 25vw, 20.9375rem);
+  }
+  #main .cs-bubbles {
+    display: block;
+    position: absolute;
+  }
+  #main .cs-bubbles-small {
+    width: 13.875rem;
+    height: 9.5rem;
+    left: -21.875rem;
+    top: -3.125rem;
+  }
+  #main .cs-bubbles-small:before {
+    /* circle 1 */
+    content: "";
+    width: 8.75rem;
+    height: 8.75rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    animation-name: floatAnimation2;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #main .cs-bubbles-small:after {
+    /* circle 2 */
+    content: "";
+    width: 7.3125rem;
+    height: 7.3125rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    animation-name: floatAnimation;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #main .cs-bubbles-big {
+    width: 19.75rem;
+    height: 24.125rem;
+    right: -22.875rem;
+    bottom: -6.25rem;
+  }
+  #main .cs-bubbles-big:before {
+    /* circle 1 */
+    content: "";
+    width: 5.875rem;
+    height: 5.875rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    animation-name: floatAnimation2;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #main .cs-bubbles-big:after {
+    /* circle 2 */
+    content: "";
+    width: 5.875rem;
+    height: 5.875rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 4.375rem;
+    right: 3.75rem;
+    animation-name: floatAnimation;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #main .cs-bubbles-big2 {
+    width: 13.1875rem;
+    height: 13.1875rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 1.4375rem;
+    left: 0.1875rem;
+    animation-name: floatAnimation;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #main .cs-bubbles-big2:before {
+    /* second bubble */
+    content: "";
+    width: 9.875rem;
+    height: 9.875rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -4.6875rem;
+    right: -4.6875rem;
+    animation-name: floatAnimation2;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+.cs-h3 {
+  /* 16px - 24px */
+  font-size: 18pt;
+  line-height: 1.5em;
+  font-weight: 700;
+  text-align: left;
+  /* 8px - 16px */
+  margin-top: 10px;
+  color: var(--headerColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 0.75rem;
+}
+.cs-name {
+  font-weight: bold;
+  flex: none;
+}
+.cs-price {
+  /* 16px - 25px */
+  font-style: "Karla", sans-serif;
+  font-size: 16pt;
+  font-weight: 500;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  order: 3;
+}
+
+.cs-item-p {
+  /* 14px - 16px */
+  flex: 1;
+  font-size: 16pt;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  color: var(--primary);
+}
+
+.cs-fake-link {
+  font-size: 1rem;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: 50px;
+  color: var(--bodyTextColor);
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 0;
+}
+.cs-fake-link:hover .cs-icon {
+  transform: translateX(0.5rem);
+}
+.cs-icon {
+  width: 1.25rem;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.card-container {
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}

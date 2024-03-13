@@ -1,0 +1,151 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #confirm {
+    padding: var(--sectionPadding);
+    position: relative;
+    background-image: url("../../assets/solid-color-image.jpeg");
+    /* Prevents overflow from the image going off screen */
+    overflow: hidden;
+  }
+  #confirm .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #confirm .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #confirm .cs-topper {
+    color: var(--primaryLight);
+    font-size: 18pt;
+    font-family: "Markazi Text", sans-serif;
+    letter-spacing: 0.2em;
+  }
+
+  #confirm .cs-title {
+    color: var(--bodyTextColorWhite);
+    font-weight: 500;
+  }
+
+  #confirm .cs-text {
+    color: var(--bodyTextColorWhite);
+    font-size: 16pt;
+  }
+
+  #confirm .cs-image-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+  #confirm .cs-item {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    margin: 0;
+    position: relative;
+    display: block;
+  }
+  #confirm .cs-item:hover .cs-hover-box {
+    opacity: 1;
+  }
+  #confirm .cs-item:hover .cs-icon {
+    /* return to original position */
+    transform: rotateY(0);
+  }
+  #confirm .cs-item:hover .cs-h3 {
+    opacity: 1;
+    /* Return to original position */
+    transform: translateY(0);
+  }
+  #confirm .cs-item:hover .cs-hover-box-text {
+    opacity: 1;
+    /* Return to original position */
+    transform: translateY(0);
+  }
+  #confirm .cs-picture {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  #confirm .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #confirm .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColor);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primaryLight);
+    border-radius: 0.25em;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #confirm .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--secondary);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25em;
+    transition: width 0.3s;
+  }
+  #confirm .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* In Between - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #confirm .cs-image-group {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+  }
+  #confirm .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #confirm .cs-item {
+    grid-column: span 3;
+  }
+}

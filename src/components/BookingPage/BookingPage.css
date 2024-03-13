@@ -1,0 +1,295 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #booking {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    background-image: url("../../assets/solid-color-image.jpeg");
+  }
+  #booking .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 44rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    column-gap: auto;
+    /* 48px - 80px */
+    row-gap: clamp(3rem, 6vw, 5rem);
+    position: relative;
+    padding-top: 100px;
+  }
+  #booking .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #booking .cs-topper {
+    color: var(--primaryLight);
+    font-size: 18pt;
+    font-family: "Markazi Text", sans-serif;
+    letter-spacing: 0.2em;
+  }
+  #booking .cs-title {
+    max-width: 23ch;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    font-weight: 500;
+  }
+  #booking .cs-picture {
+    width: 100%;
+    /* 240px - 300px */
+    height: clamp(15rem, 35vw, 18.75rem);
+    margin: 0 0 1.5rem;
+    border-radius: 1.5rem;
+    /* clips image corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #booking .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #booking .cs-contact-text {
+    font-size: 18pt;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 0 0 1.5rem;
+    color: var(--bodyTextColorWhite);
+  }
+  #booking .cs-ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+  }
+  #booking .cs-li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  #booking .cs-li:hover .cs-icon-wrapper {
+    transform: scale(1.1);
+  }
+  #booking .cs-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 0.75rem;
+    color: var(--primaryLight);
+    display: block;
+  }
+  #booking .cs-link {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    display: block;
+    position: relative;
+  }
+  #booking .cs-link:hover {
+    text-decoration: underline;
+  }
+  #booking .cs-icon-wrapper {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 1px solid var(--primaryLight);
+    color: var(--primaryLight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    transition: transform 0.3s;
+  }
+  #booking .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+  #booking .cs-form {
+    width: 100%;
+    /* 24px - 48px top and bottom */
+    /* 16px - 32px left and right */
+    padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 2rem);
+    /* prevents flexbox from affecting height and width */
+    box-sizing: border-box;
+    background-color: var(--bodyTextColorWhite);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #booking .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #booking .cs-input {
+    font-size: 1rem;
+    font-family: "Karla", sans-serif;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: var(--headerColor);
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 0.5px solid var(--primary);
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #booking .cs-select {
+    appearance: none;
+    background-image: url("https://www.svgrepo.com/show/509899/down-chevron.svg");
+    background-size: 14pt;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 1.5rem) center;
+    font-size: 1rem;
+    font-family: "Karla", sans-serif;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: var(--headerColor);
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 0.5px solid var(--primary);
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #booking .cs-option {
+    border-radius: 0.5rem;
+  }
+  #booking .cs-input::placeholder {
+    color: var(--primary);
+    opacity: 0.6;
+  }
+  #booking .cs-textarea {
+    min-height: 7.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+  }
+  #booking .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColor);
+    border: none;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primaryLight);
+    border-radius: 16px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color 0.3s;
+  }
+  #booking .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--secondary);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #booking .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #booking .cs-submit {
+    width: 100%;
+    min-width: 17.6875rem;
+    border-radius: 0.5rem;
+  }
+  #booking .cs-submit:hover {
+    cursor: pointer;
+  }
+  #booking .cs-graphic {
+    display: none;
+  }
+  #booking .cs-graphic1 {
+    width: 13rem;
+    height: auto;
+    position: absolute;
+    left: -7.5rem;
+    top: 8.625rem;
+  }
+  #booking .cs-graphic2 {
+    width: 12.8125rem;
+    height: auto;
+    position: absolute;
+    right: -9.75rem;
+    top: 0.5rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #booking .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #booking .cs-contact-group {
+    width: 50%;
+    max-width: 39.375rem;
+  }
+  #booking .cs-form {
+    width: 46%;
+    max-width: 36.125rem;
+  }
+  #booking .cs-submit {
+    width: auto;
+  }
+}
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+  #booking .cs-graphic {
+    display: block;
+  }
+}
