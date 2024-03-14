@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+# Meta Front-end Developer Capstone Project - Little Lemon Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
 
-## Available Scripts
+The following project was completed as part of the Meta Front-end Developer Course on Coursera as the final capstone project. The goal of the project was to build a React-based web application for a fictional client, the Little Lemon restaurant. By applying the knowledge and skills gained throughout the course, I was able to build a front-end website that solved the problem the client was facing while following the proper lifecycle of designing and developing a website.  
 
-In the project directory, you can run:
+## Details
 
-### `npm start`
+The technologies used to make this website are React v18.2 typed in JavaScript(JSX) and styled with vanilla CSS. The UI/UX was designed using Figma, from wireframing the project to creating initial prototypes, as well as creating personas and customer journeys to help solve the problem that the Little Lemon restaurant was facing. This was a great learning opportunity for me as it was my first time learning Figma and the process and principles of UI/UX design. Jest was used to conduct unit tests on the website throughout the project to ensure the website functioned as intended. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The goal of the project was to build a new website for the Little Lemon restaurant, and implement a reservation page to allow customers to reserve a table online while being UI/UX friendly so customers had an easy time navigating the website. One of the main issues faced while building the project was the available times API. Originally the goal of the project was to connect to the API so that the reservation form could utilize live data to show available times based on the selected date. Since the API link was broken, I had to implement a fake API that returned a randomly generated array of available times. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
