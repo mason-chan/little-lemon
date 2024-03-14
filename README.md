@@ -1,5 +1,7 @@
 # Meta Front-End Developer Capstone Project - Little Lemon Website
 
+[View live here!](https://little-lemon-4fi0h2epk-mctekno.vercel.app/)
+
 ## Purpose
 
 The following project was completed as part of the Meta Front-End Developer Course on Coursera as the final capstone project. The goal of the project was to build a React-based web application for a fictional client, the Little Lemon restaurant. By applying the knowledge and skills gained throughout the course, I was able to build a front-end website that solved the problem the client was facing while following the proper lifecycle of designing and developing a website.  
